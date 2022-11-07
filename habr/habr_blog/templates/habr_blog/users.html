@@ -1,0 +1,16 @@
+{% extends 'habr_blog/base.html' %}
+
+{% block content %}
+{% for u in users %}
+  <h1><a href="{% url 'user_post' u.pk %}">{{u.username}}</a></h1>
+    {% endfor %}
+
+{{post.content|linebreaks}}
+{% endblock %}
+
+
+
+
+
+
+
